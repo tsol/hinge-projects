@@ -45,10 +45,9 @@ once it's running, just talk to your agent:
 | You say | Agent answers |
 |---------|---------------|
 | `what's running?` | `hinge → https://xxx.trycloudflare.com ✅` + project list |
-| `start hinge` | `vite=yes port=5176 tunnel=yes ✅ url=https://...` |
 | `what's the url for krollo?` | `https://plasma-sun-jon-motors.trycloudflare.com` |
-| `create vue project test-app --start` | `✅ Created test-app … url=https://...` |
-| `create react blog test-blog --start` | `✅ Created blog … url=https://...` |
+| `create vue project test-app` | `✅ Created test-app … url=https://...` |
+| `create react blog test-blog` | `✅ Created blog … url=https://...` |
 | `delete test-app` | `✅ Removed test-app` |
 | `restart krollo` | `✅ Restarted, tunnel: https://...` |
 

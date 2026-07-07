@@ -45,10 +45,9 @@ https://raw.githubusercontent.com/tsol/hinge-projects/main/skills/hinge-projects
 | Ты говоришь | Агент отвечает |
 |-------------|----------------|
 | `чё работает?` | `hinge → https://xxx.trycloudflare.com ✅` + список проектов |
-| `запусти hinge` | `vite=yes port=5176 tunnel=yes ✅ url=https://...` |
 | `какой урл у krollo?` | `https://plasma-sun-jon-motors.trycloudflare.com` |
-| `создай вью проект test-app --start` | `✅ Created test-app … url=https://...` |
-| `создай реакт блог test-blog --start` | `✅ Created blog … url=https://...` |
+| `создай вью проект test-app` | `✅ Created test-app … url=https://...` |
+| `создай реакт блог test-blog` | `✅ Created blog … url=https://...` |
 | `удали test-app` | `✅ Removed test-app` |
 | `перезапусти krollo` | `✅ Restarted, tunnel: https://...` |
 
