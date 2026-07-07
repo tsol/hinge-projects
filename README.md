@@ -1,56 +1,62 @@
-# hinge-projects
+# hinge-projects 🛝
 
-**HINGE** — into a Vite project we inject a small helper, which allows you to pinpoint the part of the website you need the agent to alter. It works as a Vite plugin alongside HMR — so changes automagically appear on the site while you're on it, surfing and looking for the next problem to solve.
+yo, лови рецепт. most cheapest and fun way to vibecode in free time i've found is:
+
+**Hermes** + **DeepSeek** + **Hinge** + **hinge-projects**
 
 [![Hinge Demo](https://img.youtube.com/vi/xMvQxht2xuI/maxresdefault.jpg)](https://youtube.com/shorts/xMvQxht2xuI)
 
-And it works right from your phone. Use it with Hermes and **hinge-projects** (`project.sh` + Cloudflare dev tunnels) — so you get access to your frontend project running with Hinge injected.
-
-While Hermes is running in Docker on your laptop, piloted by DeepSeek (or any LLM), you manage your projects using Hinge and tunnels — when you have a free minute you take your phone, find a thing to change on your site and just point your agent to fix that.
-
-You can even share the access with a non-tech friend who works on the same site — they can leave their messages in the queue or immediately run a task.
-
 ---
 
-## Install
+## what's the deal
 
-Give your agent this link:
+you know that feeling when an idea pops and you just wanna quickly build it on your phone while lying on a couch? yeah.
+
+**HINGE** is a tiny Vite plugin that injects a helper overlay into your frontend project. you click a cog, type what you want changed, and your AI agent edits the code — HMR makes it appear right in the browser. no IDE, no terminal, no desk required.
+
+you run a **cloudflared tunnel** to your local dev server, get a public URL, open it on your phone, and start vibecoding from anywhere.
+
+the setup takes one command. and i mean **one**:
 
 ```
 https://raw.githubusercontent.com/tsol/hinge-projects/main/skills/hinge-projects-install.md
 ```
 
-The agent will:
-
-1. Clone `hinge-projects` and `tsol/hinge`
-2. Build Hinge
-3. Register operational skills
-4. Start Hinge dev server with a Cloudflare Tunnel
-5. Give you a public URL
+give that to your agent. done.
 
 ---
 
-## Usage from Telegram (or any chat)
+## what you get
 
-Once installed, talk to your agent in natural language:
+- a dev server with Hinge panel on any machine you own
+- a public URL accessible from your phone, tablet, anywhere
+- ability to **create new Vue/React projects** with Hinge pre-wired — one command
+- your agent knows the project structure, reads/writes files, live updates in browser
+- you can even share the tunnel with a friend who's not technical — they can leave tasks in the queue
 
-| You say | Agent replies |
+---
+
+## how to use from Telegram (or any chat)
+
+once it's running, just talk to your agent:
+
+| You say | Agent answers |
 |---------|---------------|
-| `какие проекты запущены?` | `hinge → https://xxx.trycloudflare.com ✅` + список всех проектов |
-| `запусти hinge` | `vite=yes port=5176 tunnel=yes url=https://... ✅` |
-| `какой url у krollo?` | `https://plasma-sun-jon-motors.trycloudflare.com` |
-| `создай vue проект test-app --start` | `✅ Created test-app (Vue 3 + Hinge) … url=https://...` |
-| `создай react blog --start` | `✅ Created blog (React + Hinge) … url=https://...` |
+| `чё работает?` | `hinge → https://xxx.trycloudflare.com ✅` + список |
+| `запусти hinge` | `vite=yes port=5176 tunnel=yes ✅ url=https://...` |
+| `какой урл у krollo?` | `https://plasma-sun-jon-motors.trycloudflare.com` |
+| `создай вью проект test-app --start` | `✅ Created test-app … url=https://...` |
+| `создай реакт блог test-blog --start` | `✅ Created blog … url=https://...` |
 | `удали test-app` | `✅ Removed test-app` |
 | `перезапусти krollo` | `✅ Restarted, tunnel: https://...` |
 
-The agent automatically runs `hip` commands under the hood:
+the agent runs `hip` under the hood — same as typing in terminal:
 
 ```bash
 hip                          # list all projects + status + URLs
-hip hinge status             # detailed Hinge status
+hip hinge status             # detailed hinge status
 hip krollo start             # start dev + tunnel
-hip krollo restart           # restart, reuse tunnel
+hip krollo restart           # restart, keeps tunnel alive
 hip create vue test-app --start
 hip create react blog --start
 hip delete test-app --force
@@ -58,46 +64,35 @@ hip delete test-app --force
 
 ---
 
-## After install
+## commands
 
-```bash
-hip                        # list projects
-hip hinge status           # Hinge dev server + tunnel
-hip create vue my-app --start   # new Vue 3 + TS project
-hip create react my-app --start  # new React + TS project
-```
-
----
-
-## Commands
-
-| Command | Description |
+| Command | What it does |
 |---------|-------------|
 | `hip` | List all projects with status + clickable URLs |
-| `hip <name> start` | Start Vite dev server + cloudflared tunnel |
-| `hip <name> stop` | Stop dev server + tunnel |
-| `hip <name> restart` | Restart Vite; reuse tunnel if same port |
-| `hip <name> status` | Detailed status (vite, tunnel, health, hinge_api) |
-| `hip create vue <name> [--start]` | Scaffold Vue 3 + TypeScript + Hinge |
-| `hip create react <name> [--start]` | Scaffold React + TypeScript + Hinge |
-| `hip create list` | Available frameworks |
-| `hip delete <name> --force` | Stop + remove project directory |
+| `hip <name> start` | Start dev server + cloudflare tunnel |
+| `hip <name> stop` | Kill dev server + tunnel |
+| `hip <name> restart` | Restart; reuses tunnel if same port |
+| `hip <name> status` | Detailed: vite, tunnel, health, hinge_api |
+| `hip create vue <name> [--start]` | Scaffold Vue 3 + TS + Hinge |
+| `hip create react <name> [--start]` | Scaffold React + TS + Hinge |
+| `hip create list` | Show available frameworks |
+| `hip delete <name> --force` | Stop + wipe project |
 
 ---
 
-## ⚠️ Security warning
+## ⚠️ братан, серьезно
 
-**hinge-projects creates public Cloudflare tunnels to your local dev server.**
+**hinge-projects creates public Cloudflare tunnels straight into your local dev server.**
 
-- Anyone with the tunnel URL can access your app and the Hinge panel
-- There is **no authentication** — no login, no password, no API key
-- The project is designed for **personal development and prototyping**
-- Do **not** use on projects with sensitive data, production systems, or anything that requires access control
+- anyone with the URL can open your app and the Hinge panel
+- there is **zero auth** — no login, password, token, nothing
+- this is strictly for **personal prototyping and vibecoding**
+- do **not** point this at production, databases, crypto wallets, or your grandma's secret cookie recipe
 
-Use at your own risk.
+you've been warned. use at your own risk.
 
 ---
 
-## Related
+## related
 
-- [tsol/hinge](https://github.com/tsol/hinge) — Vite plugin + UI component for Hermes agent integration
+- [tsol/hinge](https://github.com/tsol/hinge) — the Vite plugin + UI overlay
