@@ -1,6 +1,6 @@
 # hinge-projects 🛝
 
-> [🇬🇧 English version](README.md)
+> [🇬🇧 English](README.md) • [🇺🇦 Українська](README.uk.md)
 
 йо, лови рецепт. самый дешёвый и весёлый способ вайбкодить в свободное время, который я нашёл:
 

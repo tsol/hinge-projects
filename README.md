@@ -1,6 +1,6 @@
 # hinge-projects 🛝
 
-> [🇷🇺 Русская версия](README.ru.md)
+> [🇷🇺 Русский](README.ru.md) • [🇺🇦 Українська](README.uk.md)
 
 yo, here's a recipe. the most cheapest and fun way to vibecode in free time i've found is:
 
