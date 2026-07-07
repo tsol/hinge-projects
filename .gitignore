@@ -14,6 +14,7 @@
 # Tracked files
 !/.gitignore
 !/README.md
+!/README.ru.md
 !/PLAN.md
 !/project.sh
 !/hinge-project-install.sh

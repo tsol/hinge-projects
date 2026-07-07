@@ -1,8 +1,10 @@
 # hinge-projects 🛝
 
-yo, лови рецепт. most cheapest and fun way to vibecode in free time i've found is:
+> [🇷🇺 Русская версия](README.ru.md)
 
-**Hermes** + **DeepSeek** + **Hinge** + **hinge-projects**
+yo, here's a recipe. the most cheapest and fun way to vibecode in free time i've found is:
+
+**[Hermes](https://hermes-agent.nousresearch.com)** + **DeepSeek** + **[Hinge](https://github.com/tsol/hinge)** + **hinge-projects**
 
 [![Hinge Demo](https://img.youtube.com/vi/xMvQxht2xuI/maxresdefault.jpg)](https://youtube.com/shorts/xMvQxht2xuI)
 
@@ -32,7 +34,7 @@ give that to your agent. done.
 - a public URL accessible from your phone, tablet, anywhere
 - ability to **create new Vue/React projects** with Hinge pre-wired — one command
 - your agent knows the project structure, reads/writes files, live updates in browser
-- you can even share the tunnel with a friend who's not technical — they can leave tasks in the queue
+- you can even share the tunnel with a non-technical friend — they can leave tasks in the queue
 
 ---
 
@@ -42,13 +44,13 @@ once it's running, just talk to your agent:
 
 | You say | Agent answers |
 |---------|---------------|
-| `чё работает?` | `hinge → https://xxx.trycloudflare.com ✅` + список |
-| `запусти hinge` | `vite=yes port=5176 tunnel=yes ✅ url=https://...` |
-| `какой урл у krollo?` | `https://plasma-sun-jon-motors.trycloudflare.com` |
-| `создай вью проект test-app --start` | `✅ Created test-app … url=https://...` |
-| `создай реакт блог test-blog --start` | `✅ Created blog … url=https://...` |
-| `удали test-app` | `✅ Removed test-app` |
-| `перезапусти krollo` | `✅ Restarted, tunnel: https://...` |
+| `what's running?` | `hinge → https://xxx.trycloudflare.com ✅` + project list |
+| `start hinge` | `vite=yes port=5176 tunnel=yes ✅ url=https://...` |
+| `what's the url for krollo?` | `https://plasma-sun-jon-motors.trycloudflare.com` |
+| `create vue project test-app --start` | `✅ Created test-app … url=https://...` |
+| `create react blog test-blog --start` | `✅ Created blog … url=https://...` |
+| `delete test-app` | `✅ Removed test-app` |
+| `restart krollo` | `✅ Restarted, tunnel: https://...` |
 
 the agent runs `hip` under the hood — same as typing in terminal:
 
@@ -80,7 +82,7 @@ hip delete test-app --force
 
 ---
 
-## ⚠️ братан, серьезно
+## ⚠️ dude, seriously
 
 **hinge-projects creates public Cloudflare tunnels straight into your local dev server.**
 
@@ -95,4 +97,5 @@ you've been warned. use at your own risk.
 
 ## related
 
-- [tsol/hinge](https://github.com/tsol/hinge) — the Vite plugin + UI overlay
+- [Hermes Agent](https://hermes-agent.nousresearch.com) — the agent runtime this was built for
+- [Hinge](https://github.com/tsol/hinge) — the Vite plugin + UI overlay
