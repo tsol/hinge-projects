@@ -1,0 +1,3 @@
+# One framework id per line — must have matching create-<id>.sh
+vue
+react

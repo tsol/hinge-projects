@@ -1,0 +1,3 @@
+# Copy to pnpm-workspace.yaml on first install (customize locally — not committed)
+packages:
+  - 'hinge'

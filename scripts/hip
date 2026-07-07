@@ -1,0 +1,26 @@
+#!/bin/bash
+# hip — Hinge Project manager
+# Thin wrapper around project.sh.
+# Installed by hinge-project-install.sh → symlink in PATH.
+set -o pipefail
+
+# Resolve project.sh relative to this script's location
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+PROJECT_SH="$SCRIPT_DIR/project.sh"
+
+# Fallback: if hip is symlinked outside projects/, look for project.sh in repo root
+if [[ ! -f "$PROJECT_SH" ]]; then
+    # Try parent dirs up to 3 levels
+    for _ in 1 2 3; do
+        SCRIPT_DIR="$(dirname "$SCRIPT_DIR")"
+        PROJECT_SH="$SCRIPT_DIR/project.sh"
+        [[ -f "$PROJECT_SH" ]] && break
+    done
+fi
+
+if [[ ! -f "$PROJECT_SH" ]]; then
+    echo "hip: project.sh not found. Re-run hinge-project-install.sh" >&2
+    exit 1
+fi
+
+exec "$PROJECT_SH" "$@"

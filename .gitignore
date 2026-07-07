@@ -1,0 +1,20 @@
+# hinge-projects: only distributable files (whitelist)
+
+# Ignore everything in repo root
+/*
+
+# Tracked directories
+!/skills/
+!/skills/**
+!/templates/
+!/templates/**
+!/scripts/
+!/scripts/**
+
+# Tracked files
+!/.gitignore
+!/README.md
+!/PLAN.md
+!/project.sh
+!/hinge-project-install.sh
+!/pnpm-workspace.yaml.example
