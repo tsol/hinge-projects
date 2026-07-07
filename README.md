@@ -4,7 +4,7 @@
 
 yo, here's a recipe. the most cheapest and fun way to vibecode in free time i've found is:
 
-**[Hermes](https://hermes-agent.nousresearch.com)** + **DeepSeek** + **[Hinge](https://github.com/tsol/hinge)** + **hinge-projects**
+**[Hermes](https://hermes-agent.nousresearch.com)** + **[DeepSeek](https://platform.deepseek.com)** + **[Hinge](https://github.com/tsol/hinge)**
 
 [![Hinge Demo](https://img.youtube.com/vi/xMvQxht2xuI/maxresdefault.jpg)](https://youtube.com/shorts/xMvQxht2xuI)
 
