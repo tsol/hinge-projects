@@ -16,7 +16,7 @@ you know that feeling when an idea pops and you just wanna quickly build it on y
 
 **HINGE** is a tiny Vite plugin that injects a helper overlay into your frontend project. you click a cog, type what you want changed, and your AI agent edits the code — HMR makes it appear right in the browser. no IDE, no terminal, no desk required.
 
-you run a **cloudflared tunnel** to your local dev server, get a public URL, open it on your phone, and start vibecoding from anywhere.
+you run **cloudflared tunnels** — one per Vite project, each with a random throwaway URL. open any of them on your phone and start vibecoding from anywhere.
 
 the setup takes one command. and i mean **one**:
 
